@@ -1,10 +1,30 @@
-langchain-community==0.27.0
-tiktoken==0.7.0
-langchain-openai==0.1.20
-langchainhub==0.1.0
-langchain==0.2.12
-langgraph==0.1.0
-langchain-text-splitters==0.1.0
-faiss-cpu==1.7.3
-pandas==1.5.3
-sqlite==3.39.4
+# Core LangChain packages
+langchain==0.3.11
+langchain-core==0.3.63
+langchain-community==0.3.11
+langchain-text-splitters==0.3.4
+
+# LangGraph for agentic workflows
+langgraph==0.2.57
+
+# LLM providers
+langchain-google-genai==2.0.0
+
+# Embeddings
+langchain-huggingface==0.1.2
+sentence-transformers==3.3.1
+
+# Vector stores
+faiss-cpu==1.9.0
+
+# Document loaders
+pypdf==5.1.0
+
+# Utilities
+pandas==2.2.3
+python-dotenv==1.0.1
+
+# Jupyter
+ipykernel==7.1.0
+
+
