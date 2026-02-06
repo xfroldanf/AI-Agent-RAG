@@ -9,7 +9,7 @@ This project is based on the [Oxford AI Course - AI Agents](https://github.com/V
 
 ## Business scenario
 
-We are the owners of a climbing e-store, and we want to enhance our customer experience by creating an AI assistant. This assistant leverages the Azure OpenAI service to provide real-time, intelligent support to our customers, helping them with various tasks such as product inquiries, order tracking, and language translation.
+We are the owners of a climbing e-store, and we want to enhance our customer experience by creating an AI assistant. This assistant leverages Google Gemini AI to provide real-time, intelligent support to our customers, helping them with various tasks such as product inquiries, order tracking, and language translation.
 
 ### Key Features
 1. Product Inquiries: The AI assistant can answer questions about different climbing products, including hiking recommendation for specific routes sponsored by the climbing store.
