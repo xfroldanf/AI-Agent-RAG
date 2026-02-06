@@ -1,7 +1,11 @@
 
 # Climbing Store AI Assistant
 
-This notebook demonstrates the use of the LangChain library with Azure OpenAI to create a conversational agent capable of assisting customers of a climbing e-commerce. 
+This notebook demonstrates the use of the LangChain library with Google Gemini to create a conversational agent capable of assisting customers of a climbing e-commerce.
+
+## Attribution
+
+This project is based on the [Oxford AI Course - AI Agents](https://github.com/Valentina-Alto/Oxford-AI-Course---AI-Agents) repository, with modifications to use different LLM and embedding providers. 
 
 ## Business scenario
 
@@ -23,35 +27,44 @@ Before running this notebook, ensure you have the following prerequisites:
 
 1. Python 3.8+: Make sure you have Python 3.8 or higher installed on your system.
 
-2. Azure OpenAI Service: You need access to the Azure OpenAI service. Ensure you have the following details:
-- AZURE_OPENAI_API_VERSION: The API version of the Azure OpenAI service.
-- AZURE_OPENAI_ENDPOINT: The endpoint URL for the Azure OpenAI service.
-- AZURE_OPENAI_API_KEY: The API key for accessing the Azure OpenAI service.
-- AZURE_OPENAI_CHAT_DEPLOYMENT_NAME: The deployment name for the Azure OpenAI chat model.
+2. Google Gemini API: You need access to the Google Gemini API. Ensure you have the following:
+- GOOGLE_API_KEY: The API key for accessing Google Gemini service.
+
+3. GPU (Optional): For optimal embedding performance with HuggingFace embeddings, a GPU is recommended but not required.
+
 Required Python Packages: Install the necessary Python packages by running the following command:
 
-```python
-pip install langchain-openai langchain-core
+```bash
+pip install -r requirements.txt
 ```
 
-**Note**: you can use other LLMs of your choice to run this notebook. If you are using a model different from the Azure OpenAI series, make sure to adjust the environment variables and the client library.
+## Technology Stack
+
+- **LLM Provider**: Google Gemini 2.5 Flash Lite
+- **Embeddings**: HuggingFace BAAI/bge-base-en-v1.5 (state-of-the-art embedding model for RAG)
+- **Vector Store**: FAISS (Facebook AI Similarity Search)
+- **Framework**: LangChain + LangGraph
 
 ## Running the notebook
-1. Clonte the repository:
-```python
-git clone <repository-url>
-cd <repository-directory>
+1. Clone the repository:
+```bash
+git clone https://github.com/xfroldanf/AI-Agent-RAG.git
+cd AI-Agent-RAG
 ```
 2. Install Dependencies
-```python
+```bash
 pip install -r requirements.txt
 ```
 3. Set environment variables
-```python
-os.environ["AZURE_OPENAI_API_VERSION"] = "<your-api-version>"
-os.environ["AZURE_OPENAI_ENDPOINT"] = "<your-endpoint>"
-os.environ["AZURE_OPENAI_API_KEY"] = "<your-api-key>"
-os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"] = "<your-deployment-name>"
+
+Create a `.env` file in the project root with:
+```bash
+GOOGLE_API_KEY=your-google-api-key-here
+```
+
+Or set it directly in your environment:
+```bash
+export GOOGLE_API_KEY="your-google-api-key-here"
 ```
 
 
